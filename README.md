@@ -1,4 +1,5 @@
-click here : [https://spam-spoiler.onrender.com](https://spam-spoiler.onrender.com)
+> Note: free hosting sleeps after inactivity — the first load may take ~30–50 seconds to wake up.
+> click here : [https://spam-spoiler.onrender.com](https://spam-spoiler.onrender.com)
 
 # Spam Spoiler — E-mail Forensics Web App
 
