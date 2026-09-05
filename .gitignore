@@ -1,0 +1,16 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Local database - may contain saved Gmail app passwords, never commit this
+instance/*.db
+
+# PyInstaller build artifacts
+build/
+dist/
+*.spec
+
+# OS junk
+.DS_Store
+Thumbs.db
