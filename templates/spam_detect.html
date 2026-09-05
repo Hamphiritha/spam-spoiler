@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}Spam Detection{% endblock %}
+{% block content %}
+<section class="panel">
+  <div class="panel-head-row">
+    <h1>Spam Detection</h1>
+    <span class="hint">{{ "Live Gmail inbox" if live else "Demo inbox (connect Gmail in Settings for live data)" }}</span>
+  </div>
+  <p class="hint">No. of flagged: {{ unread }}</p>
+  <div class="table-scroll">
+    <table class="data-grid inbox-grid">
+      <thead>
+        <tr>
+          <th>Sno</th>
+          <th>Mail From</th>
+          <th>Subject</th>
+          <th>Message</th>
+          <th>Date</th>
+          <th>Class</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for mail in emails %}
+        <tr>
+          <td>{{ mail.sno }}</td>
+          <td>{{ mail['from'] }}</td>
+          <td>{{ mail.subject }}</td>
+          <td>{{ mail.message }}</td>
+          <td>{{ mail.date }}</td>
+          <td><span class="tag tag-{{ mail.label }}">{{ mail.label }}</span></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}User Login{% endblock %}
+{% block content %}
+<section class="auth-split">
+  <div class="auth-art" aria-hidden="true">
+    <svg viewBox="0 0 260 260" width="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0" y="0" width="260" height="260" rx="16" fill="rgba(255,255,255,0.08)"/>
+      <rect x="60" y="80" width="140" height="95" rx="8" fill="none" stroke="white" stroke-width="2"/>
+      <path d="M60 88 L130 135 L200 88" stroke="white" stroke-width="2" fill="none"/>
+      <circle cx="205" cy="55" r="26" fill="#FF8A3D"/>
+      <path d="M195 55h20M205 45v20" stroke="white" stroke-width="3"/>
+    </svg>
+  </div>
+  <div class="auth-card">
+    <h1>User Login</h1>
+    <form method="POST" action="{{ url_for('login_user') }}">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" required autofocus>
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required>
+      <button type="submit" class="btn btn-primary btn-block">Login</button>
+    </form>
+    <p class="auth-alt">New user? <a href="{{ url_for('register') }}">Create an account</a></p>
+  </div>
+</section>
+{% endblock %}

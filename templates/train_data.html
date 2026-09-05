@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Training Phase{% endblock %}
+{% block content %}
+<section class="panel">
+  <h1>Training Phase</h1>
+  <p class="hint">Spam Filter using Word Embedding &amp; LSTM — data understanding and preparation</p>
+  <div class="data-table">
+    <div class="data-table-head">Text</div>
+    <div class="data-table-body">
+      {% for row in rows %}
+        <div class="data-row">
+          <p class="data-text">{{ row.text }}</p>
+          <span class="tag tag-{{ row.label }}">{{ row.label }}</span>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  <a class="btn btn-primary" href="{{ url_for('process3') }}">Preprocessing</a>
+</section>
+{% endblock %}

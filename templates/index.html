@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block title %}Spam Spoiler — Home{% endblock %}
+{% block content %}
+<section class="hero">
+  <div class="hero-copy">
+    <p class="hero-eyebrow">E-mail forensics, automated</p>
+    <h1>Spam Spoiler</h1>
+    <p class="hero-sub">An LSTM/GRU-based classifier that sorts every incoming e-mail into Normal, Fraudulent, Threatening or Suspicious — built for public and private mail services.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="{{ url_for('login_user') }}">Get started</a>
+      <a class="btn btn-ghost" href="#how-it-works">Read more</a>
+    </div>
+  </div>
+  <div class="hero-art" aria-hidden="true">
+    <svg viewBox="0 0 320 260" width="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect x="30" y="70" width="200" height="130" rx="10" fill="rgba(255,255,255,0.12)" stroke="white" stroke-width="2"/>
+      <path d="M30 78 L130 150 L230 78" stroke="white" stroke-width="2" fill="none"/>
+      <circle cx="255" cy="60" r="34" fill="#FF8A3D"/>
+      <line x1="235" y1="40" x2="275" y2="80" stroke="white" stroke-width="4"/>
+      <line x1="275" y1="40" x2="235" y2="80" stroke="white" stroke-width="4"/>
+      <rect x="60" y="200" width="60" height="10" rx="5" fill="rgba(255,255,255,0.4)"/>
+    </svg>
+  </div>
+</section>
+
+<section id="how-it-works" class="panel">
+  <h2>How the pipeline works</h2>
+  <div class="steps">
+    <div class="step">
+      <span class="step-num">1</span>
+      <h3>Collect &amp; preprocess</h3>
+      <p>Incoming mail is normalized — stop words removed, stemmed, tokenized and padded.</p>
+    </div>
+    <div class="step">
+      <span class="step-num">2</span>
+      <h3>Extract features</h3>
+      <p>Word-cloud frequency counts and TF-IDF weighting turn each message into a feature vector.</p>
+    </div>
+    <div class="step">
+      <span class="step-num">3</span>
+      <h3>Classify</h3>
+      <p>An LSTM/GRU network scores the message across four classes for forensic review.</p>
+    </div>
+    <div class="step">
+      <span class="step-num">4</span>
+      <h3>Decide</h3>
+      <p>Results land in the inbox view, flagged and ready for evidence or action.</p>
+    </div>
+  </div>
+</section>
+{% endblock %}

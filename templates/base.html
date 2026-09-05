@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% block title %}Spam Spoiler{% endblock %}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="{{ url_for('index') }}">
+    <span class="brand-mark" aria-hidden="true">
+      <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="2" y="6" width="26" height="18" rx="3" stroke="currentColor" stroke-width="2"/>
+        <path d="M3 8L15 17L27 8" stroke="currentColor" stroke-width="2" fill="none"/>
+        <line x1="4" y1="26" x2="26" y2="4" stroke="currentColor" stroke-width="2.5"/>
+      </svg>
+    </span>
+    Spam Spoiler
+  </a>
+  <nav class="nav-links">
+    <a href="{{ url_for('index') }}">Home</a>
+    {% if session.get('username') %}
+      <a href="{{ url_for('userhome') }}">User</a>
+      <a href="{{ url_for('spam_detect') }}">Spam Detection</a>
+      <a href="{{ url_for('logout') }}">Logout</a>
+    {% else %}
+      <a href="{{ url_for('login_user') }}">User</a>
+    {% endif %}
+    <a href="{{ url_for('train_data') }}">Admin</a>
+  </nav>
+</header>
+
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <div class="flash-wrap">
+      {% for m in messages %}<div class="flash">{{ m }}</div>{% endfor %}
+    </div>
+  {% endif %}
+{% endwith %}
+
+<main>
+{% block content %}{% endblock %}
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span>Tamil Nadu, India</span>
+    <span>Call: (+91) 12345 67890</span>
+    <span>spam@info.com</span>
+  </div>
+  <p class="footer-note">Spam Spoiler &mdash; AI-based e-mail forensics demo project</p>
+</footer>
+</body>
+</html>

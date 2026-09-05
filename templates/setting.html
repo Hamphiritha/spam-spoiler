@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Set Your Gmail ID & Password{% endblock %}
+{% block content %}
+<section class="split-panel">
+  <div class="split-art" aria-hidden="true">
+    <svg viewBox="0 0 260 220" width="100%" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="130" cy="110" r="90" fill="rgba(255,255,255,0.08)"/>
+      <rect x="70" y="80" width="120" height="80" rx="8" fill="none" stroke="white" stroke-width="2"/>
+      <path d="M70 88 L130 125 L190 88" stroke="white" stroke-width="2" fill="none"/>
+    </svg>
+  </div>
+  <div class="split-copy">
+    <h1>Set your Gmail ID &amp; password</h1>
+    <p class="hint">Use a Google <a href="https://myaccount.google.com/apppasswords" target="_blank" rel="noopener">App Password</a>, not your normal Gmail password — Google blocks plain-password IMAP logins.</p>
+    <form method="POST" action="{{ url_for('setting') }}" class="settings-form">
+      <label for="gmail_id">Gmail ID</label>
+      <input type="email" id="gmail_id" name="gmail_id" placeholder="you@gmail.com" required>
+      <label for="gmail_password">Gmail app password</label>
+      <input type="password" id="gmail_password" name="gmail_password" required>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</section>
+{% endblock %}

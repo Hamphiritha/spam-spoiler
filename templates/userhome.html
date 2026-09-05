@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}User Home{% endblock %}
+{% block content %}
+<section class="split-panel">
+  <div class="split-art" aria-hidden="true">
+    <svg viewBox="0 0 260 220" width="100%" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="130" cy="110" r="90" fill="rgba(255,255,255,0.08)"/>
+      <rect x="70" y="80" width="120" height="80" rx="8" fill="none" stroke="white" stroke-width="2"/>
+      <path d="M70 88 L130 125 L190 88" stroke="white" stroke-width="2" fill="none"/>
+      <rect x="30" y="50" width="34" height="24" rx="4" fill="#FF6B6B"/>
+      <rect x="196" y="140" width="34" height="24" rx="4" fill="#FF6B6B"/>
+    </svg>
+  </div>
+  <div class="split-copy">
+    <span class="badge">User: {{ session.get('username') }}</span>
+    <h1>Welcome back</h1>
+    <p>Connect a Gmail account so Spam Spoiler can pull your inbox and classify each message as it arrives.</p>
+    <a class="btn btn-primary" href="{{ url_for('setting') }}">Set your Gmail ID and password</a>
+    <a class="btn btn-ghost" href="{{ url_for('spam_detect') }}">Go to Spam Detection</a>
+    {% if user and user['gmail_id'] %}
+      <p class="hint">Connected as {{ user['gmail_id'] }}</p>
+    {% endif %}
+  </div>
+</section>
+{% endblock %}

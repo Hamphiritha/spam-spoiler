@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Create Account{% endblock %}
+{% block content %}
+<section class="auth-split">
+  <div class="auth-art" aria-hidden="true">
+    <svg viewBox="0 0 260 260" width="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0" y="0" width="260" height="260" rx="16" fill="rgba(255,255,255,0.08)"/>
+      <circle cx="130" cy="100" r="34" fill="none" stroke="white" stroke-width="3"/>
+      <path d="M75 190c0-30 25-50 55-50s55 20 55 50" stroke="white" stroke-width="3" fill="none"/>
+    </svg>
+  </div>
+  <div class="auth-card">
+    <h1>New User</h1>
+    <form method="POST" action="{{ url_for('register') }}">
+      <label for="username">Choose a username</label>
+      <input type="text" id="username" name="username" required autofocus>
+      <label for="password">Choose a password</label>
+      <input type="password" id="password" name="password" required>
+      <button type="submit" class="btn btn-primary btn-block">Create account</button>
+    </form>
+    <p class="auth-alt">Already registered? <a href="{{ url_for('login_user') }}">Log in</a></p>
+  </div>
+</section>
+{% endblock %}

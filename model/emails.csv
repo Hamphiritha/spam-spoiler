@@ -1,0 +1,56 @@
+text,label
+"Let me know when you get the quotes from Pauline for the siding work.",normal
+"Please find attached the minutes from yesterday's team meeting.",normal
+"Can you review the budget spreadsheet and send feedback by Friday?",normal
+"Reminder: the project deadline has been moved to next Monday.",normal
+"Thanks for the update, I'll pass this along to the client.",normal
+"Attached is the invoice for last month's consulting hours.",normal
+"Looking forward to seeing you at the conference next week.",normal
+"The server maintenance window is scheduled for Sunday night.",normal
+"Please confirm your availability for the 3pm call tomorrow.",normal
+"Here is the revised draft of the proposal, let me know your thoughts.",normal
+"Happy birthday! Hope you have a wonderful day with family.",normal
+"Your order has shipped and will arrive within 3-5 business days.",normal
+"Can you send over the rent collection summary for August through December?",normal
+"The quarterly report is ready for your review in the shared drive.",normal
+"Let's schedule a follow up call to discuss the contract terms.",normal
+"Team lunch is moved to 1pm today, see you in the cafeteria.",normal
+"Your subscription renewal receipt is attached for your records.",normal
+"Please remove Bob and Liz from the recipient list going forward.",normal
+"I have completed the requested changes to the document.",normal
+"Our flight itinerary for the site visit is confirmed for Tuesday.",normal
+"Congratulations! You have been selected to receive $5,000,000 from an unclaimed inheritance. Reply with your bank details to claim now.",fraudulent
+"I am the son of the late president and I need your help transferring $10 million dollars. Contact me urgently with your account information.",fraudulent
+"You have won the international lottery! Send your name, address and bank account number to process your prize immediately.",fraudulent
+"Dear beneficiary, your $2,300,000 compensation payment is ready, pay a small processing fee to release the funds.",fraudulent
+"As soon as your information is received by my attorney, we will proceed with the wire transfer of your inheritance.",fraudulent
+"I am a girl of 25 years looking for an investment opportunity, please send your account details so we can proceed.",fraudulent
+"Your bank account has been suspended, click here and enter your password and card number to reactivate it.",fraudulent
+"URGENT: verify your account now by replying with your username, password and social security number.",fraudulent
+"Claim your free gift card now, just enter your credit card number to cover shipping.",fraudulent
+"I am a wealthy widow seeking a trustworthy partner to manage my late husband's fortune, kindly share your bank details.",fraudulent
+"You have been pre-approved for a $50,000 loan, no credit check, just send your account number to deposit funds.",fraudulent
+"This is the IRS, you owe back taxes, pay immediately via gift card or face arrest.",fraudulent
+"Your PayPal account will be closed unless you confirm your card number and CVV within 24 hours.",fraudulent
+"Contact the barrister below with your passport details to release your late relative's estate.",fraudulent
+"We are holding a shipment for you, pay the customs fee with your card number to release it.",fraudulent
+"Pay the amount now or your family will suffer the consequences, this is your final warning.",threatening
+"If you do not transfer the money by tonight we will release your private photos to everyone you know.",threatening
+"We know where you live, respond immediately or things will get very bad for you.",threatening
+"So be informed that the amount has to be paid now or there will be serious consequences.",threatening
+"Send the payment within 24 hours or we will destroy your reputation online.",threatening
+"This is your last warning, comply or face the outcome.",threatening
+"I have access to your device and everything on it, pay up or I expose you.",threatening
+"You will regret ignoring this message, act now before it's too late.",threatening
+"Failure to respond will result in immediate and irreversible action against you.",threatening
+"We are watching you, do exactly as instructed or suffer the consequences.",threatening
+"Hi, I noticed you didn't complete your profile, please log in and verify a few details when you can.",suspicious
+"Your package could not be delivered, click this link to reschedule and confirm your address.",suspicious
+"We noticed unusual sign-in activity, please confirm it was you by clicking below.",suspicious
+"Your invoice is overdue, click here to view and pay to avoid late fees.",suspicious
+"Please update your payment method by clicking the secure link below.",suspicious
+"A document has been shared with you, click here to view it now.",suspicious
+"Your mailbox is almost full, click here to upgrade your storage immediately.",suspicious
+"Verify your identity here to keep your account active.",suspicious
+"This voicemail transcript is attached, click to listen to the full message.",suspicious
+"Your subscription payment failed, update your billing info through this link.",suspicious

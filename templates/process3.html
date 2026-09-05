@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title %}Feature Extraction{% endblock %}
+{% block content %}
+<section class="panel">
+  <h1>Feature Extraction</h1>
+  <p class="hint">TF-IDF</p>
+  <div class="table-scroll">
+    <table class="data-grid">
+      <thead>
+        <tr>
+          <th>#</th>
+          {% for c in cols %}<th>{{ c }}</th>{% endfor %}
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in table_rows %}
+        <tr>
+          <td>{{ loop.index }}</td>
+          {% for c in cols %}<td>{{ row[c] }}</td>{% endfor %}
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Describe</h2>
+  <div class="table-scroll">
+    <table class="data-grid">
+      <thead>
+        <tr>
+          <th>#</th>
+          {% for c in cols %}<th>{{ c }}</th>{% endfor %}
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in describe_rows %}
+        <tr>
+          <td>{{ row['index'] }}</td>
+          {% for c in cols %}<td>{{ row[c] }}</td>{% endfor %}
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+{% endblock %}
